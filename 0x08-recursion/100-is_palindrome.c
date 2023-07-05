@@ -13,6 +13,15 @@ int _len(char *s)
 		return (1 + _len(s + 1));
 }
 
+/**
+* compare - compares the strings
+* @s - string
+* @i - small iteration.
+* @j - large iteration.
+* 
+* Returns: 0 or 1 if true or not
+*/
+
 int compare(char *s, int i, int j)
 {
 	if (*(s + i) == *(s + j))
@@ -23,6 +32,12 @@ int compare(char *s, int i, int j)
 	}
 	return (0);
 }
+
+/**
+ * is_palindrome - detects if a string is a palindrome.
+ * @s: string.
+ * Return: 1 if s is a palindrome.
+*/
 
 int is_palindrome(char *s)
 {
