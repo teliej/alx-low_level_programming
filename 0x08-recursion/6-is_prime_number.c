@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * is_prime - determine if input number is a prime number.
+ * prime - determine if input number is a prime number.
  * @n: input number.
- * @c: l
+ * @i: l
  * Return: 1 if n is a prime number and 0 otherwise.
  */
 
@@ -18,7 +18,11 @@ int prime(unsigned int n, unsigned int i)
 	}
 	return (0 + prime(n, i + 1));
 }
-
+/**
+ * is_prime_number - determine if input number is a prime number.
+ * @n: input number.
+ * Return: 1 if n is a prime number and 0 if else
+ */
 int is_prime_number(int n)
 {
 	if (n == 0)
