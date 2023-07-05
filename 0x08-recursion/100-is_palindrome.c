@@ -15,9 +15,9 @@ int _len(char *s)
 
 /**
 * compare - compares the strings
-* @s - string
-* @i - small iteration.
-* @j - large iteration.
+* @s: - string
+* @i: - small iteration.
+* @j: - large iteration.
 *
 * Returns: 0 or 1 if true or not
 */
