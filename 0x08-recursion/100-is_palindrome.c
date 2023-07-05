@@ -19,7 +19,7 @@ int _len(char *s)
 * @i: - small iteration.
 * @j: - large iteration.
 *
-* Returns: 0 or 1 if true or not
+* Return: 0 or 1 if true or not
 */
 
 int compare(char *s, int i, int j)
