@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * power_operation - output the  natural square root of a number.
+ * power_math - output the  natural square root of a number.
  * @n: input number.
- * @c: iterator.
+ * @i: iterator.
  * Return: square root or -1.
  */
 
@@ -18,6 +18,11 @@ int power_math(int n, int i)
 	}
 	return (0 + power_math(n, i + 1));
 }
+/**
+ * _sqrt_recursion - returns the natural square root of a number.
+ * @n: input number.
+ * Return: natural square root.
+ */
 
 int _sqrt_recursion(int n)
 {
