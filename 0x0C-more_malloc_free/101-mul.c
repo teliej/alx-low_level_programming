@@ -47,6 +47,42 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	return (ptr);
 }
 
+/**
+ * check_number - checks if a string has only numbers
+ *
+ * @str: string to check
+ *
+ * Return: returns 0 is true 1 if false
+ */
+
+int check_number(char *str)
+{
+	while (*str != '\0')
+	{
+		if (*str < '0' || *str > '9')
+			return (1);
+		str++;
+	}
+	return (0);
+}
+
+
+/**
+ * _length - length of strings
+ *
+ * @str: string to get length from
+ *
+ * Return: length of string
+ */
+
+int _length(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
 
 /**
  * multiply - initialize array with 0 byte
@@ -98,6 +134,23 @@ void multiply(char *s1, char *s2)
 	free(temp);
 }
 
+/**
+ * error_exit - prints error with _putchar and exits with 98
+ *
+ * Return: Error 98 and exit(98)
+ */
+
+int error_exit(void)
+{
+	char *err;
+	int i;
+
+	err = "Error";
+	for (i = 0; err[i] != '\0'; i++)
+		_putchar(err[i]);
+	_putchar('\n');
+	exit(98);
+}
 
 /**
  * main - Entry point
@@ -116,7 +169,7 @@ int main(int argc, char *argv[])
 	char *n2 = argv[2];
 
 	if (argc != 3 || check_number(n1) || check_number(n2))
-		on_exit();
+		error_exit();
 
 	if (*n1 == '0' || *n2 == '0')
 	{
